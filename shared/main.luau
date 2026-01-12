@@ -119,7 +119,7 @@ m, n=i:GetMouse(), e
 local o,p,q,r=f(n.Creator),f(n.Elements),f(n.Acrylic),n.Components
 local s,t,u=f(r.Notification),o.New,protectgui or(syn and syn.protect_gui)or function()
 end
-local v=t("ScreenGui",{Parent=h:IsStudio()and i.PlayerGui or a.CoreGui})
+local v=t("Angelwings",{Parent=h:IsStudio()and i.PlayerGui or a.CoreGui})
 u(v)
 s:Init(v)
 local w={
@@ -1962,7 +1962,7 @@ Registry={},
 Signals={},
 TransparencyMotors={},
 DefaultProperties={
-ScreenGui={ResetOnSpawn=false,ZIndexBehavior=Enum.ZIndexBehavior.Sibling},
+Angelwings={ResetOnSpawn=false,ZIndexBehavior=Enum.ZIndexBehavior.Sibling},
 Frame={
 BackgroundColor3=Color3.new(1,1,1),
 BorderColor3=Color3.new(0,0,0),
