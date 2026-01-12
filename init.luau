@@ -40,12 +40,12 @@ local function fetcher_config()
 end
 
 local Window = Fluent:CreateWindow({
-    Title = 'angeli',
+    Title = 'Angelwings',
     SubTitle = '',
     TabWidth = 100,
     Size = UDim2.fromOffset(480, 360),
     Acrylic = false,
-    Theme = 'Darker',
+    Theme = 'Amethyst',
     MinimizeKey = Enum.KeyCode.End
 })
 
