@@ -3,7 +3,7 @@ local HttpService = cloneref(game:GetService('HttpService'))
 local Flags = {}
 local Config, Fetcher = {}, {}
 
-local Fluent = loadstring(game:HttpGet('https://raw.githubusercontent.com/enrithy/Temp/refs/heads/main/recode/shared/main.luau'))()
+local Fluent = loadstring(game:HttpGet('https://raw.githubusercontent.com/enrithy/temp/refs/heads/main/shared/main.luau'))()
 
 local function save_config()
     if not isfolder('angeli') then
