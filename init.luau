@@ -6,31 +6,31 @@ local Config, Fetcher = {}, {}
 local Fluent = loadstring(game:HttpGet('https://raw.githubusercontent.com/enrithy/temp/refs/heads/main/shared/main.luau'))()
 
 local function save_config()
-    if not isfolder('angeli') then
-        makefolder('angeli')
+    if not isfolder('Angelwings') then
+        makefolder('Angelwings')
     end
 
-    if not isfolder(`angeli/configs`) then
-        makefolder(`angeli/configs`)
+    if not isfolder(`Angelwings/configs`) then
+        makefolder(`Angelwings/configs`)
     end
 
-    if not isfile(`angeli/configs/{game.PlaceId}.json`) then
-        writefile(`angeli/configs/{game.PlaceId}.json`, HttpService:JSONEncode({}))
+    if not isfile(`Angelwings/configs/{game.PlaceId}.json`) then
+        writefile(`Angelwings/configs/{game.PlaceId}.json`, HttpService:JSONEncode({}))
     end
 
     for index, value in pairs(Flags) do
         Config[index] = type(value) == 'table' and HttpService:JSONDecode(HttpService:JSONEncode(value)) or value
     end
 
-    writefile(`angeli/configs/{game.PlaceId}.json`, HttpService:JSONEncode(Config))
+    writefile(`Angelwings/configs/{game.PlaceId}.json`, HttpService:JSONEncode(Config))
 end
 
 local function fetcher_config()
-    if not isfolder('angeli') or not isfile(`angeli/configs/{game.PlaceId}.json`) then
+    if not isfolder('Angelwings') or not isfile(`Angelwings/configs/{game.PlaceId}.json`) then
         save_config()
     end
 
-    Fetcher = HttpService:JSONDecode(readfile(`angeli/configs/{game.PlaceId}.json`))
+    Fetcher = HttpService:JSONDecode(readfile(`Angelwings/configs/{game.PlaceId}.json`))
 
     for index, value in pairs(Fetcher) do
         Flags[index] = value
@@ -45,7 +45,7 @@ local Window = Fluent:CreateWindow({
     TabWidth = 100,
     Size = UDim2.fromOffset(480, 360),
     Acrylic = false,
-    Theme = 'Amethyst',
+    Theme = 'Dark',
     MinimizeKey = Enum.KeyCode.End
 })
 
