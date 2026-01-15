@@ -119,7 +119,7 @@ m, n=i:GetMouse(), e
 local o,p,q,r=f(n.Creator),f(n.Elements),f(n.Acrylic),n.Components
 local s,t,u=f(r.Notification),o.New,protectgui or(syn and syn.protect_gui)or function()
 end
-local v=t("ScreenGui",{Parent=h:IsStudio()and i.PlayerGui or a.CoreGui})
+local v=t("ScreenGui",{Name="Angelwings",Parent=h:IsStudio()and i.PlayerGui or a.CoreGui})
 u(v)
 s:Init(v)
 local w={
